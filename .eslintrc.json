@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "plugin:recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true
+    },
+    "plugins": [],
+    "rules": {},
+    "globals": {}
+}
