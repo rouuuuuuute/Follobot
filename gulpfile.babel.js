@@ -1,36 +1,38 @@
-import gulp from 'gulp';
-import webpackConfig from './webpack.config.js';
-import webpack from 'webpack-stream';
-import browserSync from 'browser-sync';
-import notify from 'gulp-notify';
-import plumber from 'gulp-plumber';
-import eslint from 'gulp-eslint';
+const gulp = require('gulp');
+const webpackConfig =require('./webpack.config.js');
+const webpack = require('webpack-stream');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const browserSync = require("browser-sync");
+const eslint = require("gulp-eslint");
 
-gulp.task('build', function(){
+function build(cb){
     gulp.src('resources/js/app.js')
         .pipe(plumber({
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
         .pipe(webpack(webpackConfig))
         .pipe(gulp.dest('public/js'));
-});
+    cb();
+}
 
-gulp.task('browser-sync', function(){
+function browser_sync(cb){
     browserSync.init({
         server: {
             baseDir: "./",
-            index: "index.php"
+            index: "index.html"
         }
     });
-});
+    cb();
+}
 
-gulp.task('bs-reload',function (){
+function bsReload(cb) {
     browserSync.reload();
-    }
-);
+    cb();
+}
 
-gulp.task('eslint',function () {
-    return gulp.src(['resources/**/*.js'])
+function esLint(cb) {
+    gulp.src(['resources/**/*.js'])
         .pipe(plumber({
             errorHandler: function (error) {
                 const taskName = 'eslint';
@@ -48,11 +50,7 @@ gulp.task('eslint',function () {
         .pipe(eslint.format())
         .pipe(eslint.failOnError())
         .pipe(plumber.stop());
-});
+    cb();
+}
 
-gulp.task('default',['eslint','build','browser-sync'], function(){
-    gulp.watch("./resources/**/*.js",['build']);
-    gulp.watch("./*.php",['bs-reload']);
-    gulp.watch("./public/**/*.+(js|css)",['bs-reload']);
-    gulp.watch("./resources/**/*.js",['eslint']);
-})
+exports.default = gulp.series(gulp.parallel(build , browser_sync, bsReload, esLint));

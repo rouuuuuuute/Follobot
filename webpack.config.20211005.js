@@ -1,5 +1,4 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     mode: 'development',
@@ -8,9 +7,6 @@ module.exports = {
         path: path.join(__dirname, 'public/js'),
         filename: 'bundle.js'
     },
-    plugins: [
-        new VueLoaderPlugin()
-    ],
     module: {
         rules: [
             {
@@ -22,18 +18,11 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            },
-            {
-                test: /\.vue$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'vue-loader',
-                }
             }
         ]
     },
     resolve: {
-        modules: [path.join(__dirname, 'resources'),'node_modules'],
+        modules: [path.join(__dirname, 'src'),'node_modules'],
         extensions: ['.js','.jsx'],
         alias:{
             vue: 'vue/dist/vue.esm.js'
