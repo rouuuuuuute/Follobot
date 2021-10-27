@@ -7,7 +7,8 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "sass": "sass resources/sass/app.scss:public/css/app.css --no-source-map --watch"
     },
     "devDependencies": {
         "@babel/cli": "^7.15.7",
@@ -18,15 +19,11 @@
         "babel": "^6.23.0",
         "babel-loader": "^8.2.2",
         "babelify": "^10.0.0",
-        "bootstrap": "^4.0.0",
         "browser-sync": "^2.27.5",
         "browserify": "^17.0.0",
         "core-js": "^3.18.1",
         "cross-env": "^7.0",
-        "csslint": "^1.0.5",
-        "eslint": "^7.32.0",
         "gulp": "^4.0.2",
-        "gulp-eslint": "^6.0.0",
         "gulp-notify": "^4.0.0",
         "gulp-plumber": "^1.2.1",
         "jquery": "^3.2",
@@ -41,7 +38,8 @@
         "vue-devtools": "^5.1.4",
         "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.10",
-        "webpack": "^5.56.1",
+        "webpack": "^5.58.1",
+        "webpack-cli": "^4.9.0",
         "webpack-stream": "^7.0.0"
     },
     "dependencies": {

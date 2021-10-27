@@ -29,14 +29,12 @@ module.exports = {
                 use: {
                     loader: 'vue-loader',
                 }
-            }
-        ]
-    },
+            }]},
     resolve: {
         modules: [path.join(__dirname, 'resources'),'node_modules'],
         extensions: ['.js','.jsx'],
         alias:{
             vue: 'vue/dist/vue.esm.js'
-        }
-    }
+               }
+              }
 }

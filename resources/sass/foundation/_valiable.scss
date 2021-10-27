@@ -1,0 +1,62 @@
+//サイト全体で使える変数を管理
+
+// Typography
+$font-family-sans-serif: 'Noto Sans JP', sans-serif;
+$line-height-default: 1.6;
+
+//width
+$site-width: 1080px;
+
+//fontsize
+$font-size-s: 12px;
+$font-size-m: 14px;
+$font-size-default: 16px;
+$font-size-l: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 30px;
+$font-size-3l: 38px;
+
+//余白
+$space_s:5px;
+$space_m:10px;
+$space_l:15px;
+$space_xl:20px;
+$space_xxl:30px;
+$space_3l:40px;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$white: #fff;
+
+$color_corp: $blue;
+$body-bg: #f8fafc;
+
+//font-color
+$font-color-default: #777;
+$font-color-header: #fff;
+$font-color-hover: #000;
+
+//メディアクエリのブレークポイント設定
+//マップ変数を使用
+$breakpoints: (
+    'sm': 'screen and (max-width:414px)',
+    'md': 'screen and (max-width:768px)',
+    'lg': 'screen and (max-width:1000px)',
+    'xl': 'screen and (max-width:1200px)',
+) !default;
+
+//mixin
+@mixin mq($breakpoint :sm) {
+    @media #{map-get($breakpoints,$breakpoint)}{
+        @content ;
+    }
+}

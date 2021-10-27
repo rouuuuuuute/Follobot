@@ -1,0 +1,32 @@
+//htmlやbodyの基本設定
+html , body{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    color: $font-color-default;
+    font-size:$font-size-default;
+    line-height: $line-height-default;
+    font-family:$font-family-sans-serif;
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: 0.1em;
+}
+
+p , a {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    color:$font-color-hover;
+    transition: .3s;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}

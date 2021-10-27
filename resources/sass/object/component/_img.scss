@@ -1,0 +1,28 @@
+.c-img {
+    &__sp {
+        margin-left:-50px;
+        width: 370px;
+        height: 390px;
+        z-index:1;
+    }
+    &__human {
+        margin-left:-50px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 110px;
+        height: 130px;
+        z-index:1;
+        &--female {
+            margin-left: 30px;
+        }
+    }
+    &__arrow {
+        width:200px;
+        margin-left:-130px;
+        padding-top:124px;
+        padding-bottom:124px;
+        transform: scale(-1, 1);
+        z-index:2;
+    }
+}

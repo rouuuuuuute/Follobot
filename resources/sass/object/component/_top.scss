@@ -1,0 +1,28 @@
+.c-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    &__title {
+        font-size: $font-size_xxl;
+        font-weight: bold;
+        line-height: $space_xxl;
+        color: $blue;
+    }
+    &__theme {
+        font-size: $font-size_xl;
+        font-weight: bold;
+    }
+    &__register{
+        margin:auto;
+        width: 300px;
+        height:50px;
+        font-size: $font-size_l;
+        border-radius:5px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        background-color:$blue;
+        color: $white;
+    }
+}

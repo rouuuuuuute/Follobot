@@ -1,0 +1,10 @@
+.c-menu {
+    display: flex;
+    align-items: center;
+    font-size: $font-size_l;
+    font-family: $font-family_sans-serif;
+    color: $font-color_header;
+    &__item {
+        margin-right: $space_xl;
+    }
+}
