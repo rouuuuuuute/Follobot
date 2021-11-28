@@ -1,0 +1,14 @@
+.c-sidebar {
+    //todo 変数
+    box-sizing:border-box;
+    //todo
+    padding-bottom: 10px;
+    &__top{
+        display: flex;
+        flex-direction: column;
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+    }
+}

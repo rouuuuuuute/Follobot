@@ -1,0 +1,22 @@
+{
+    "Name":     "氏名",
+    "E-Mail Address": "Eメールアドレス",
+    "Password": "パスワード",
+    "Confirm Password": "再確認パスワード",
+    "Register": "ユーザー登録",
+    "Login": "ログイン",
+    "Profile": "プロフィール",
+    "Remember Me": "情報を記憶する",
+    "Forgot Your Password?":"パスワードをお忘れですか？",
+    "Update": "更新する",
+    "Withdraw": "退会する",
+    "Twitter accounts":"Twitterアカウント",
+    "accounts": "アカウント",
+    "Delete": "削除する",
+    "keyword":"キーワード",
+    "Favorites Keywords":"「自動いいね」キーワード",
+    "Follow Keywords": "「自動フォロー」キーワード",
+    "Change Your Password?":"パスワードを変更する場合はこちら",
+    "Register Accounts": "アカウント登録"
+
+}

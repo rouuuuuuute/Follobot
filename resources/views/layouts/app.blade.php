@@ -19,10 +19,6 @@
         <title>{{ config('app.name') }}</title>
 @endif
 
-<!--ToDo jsなので後で下に移動する -->
-    <!-- Scripts -->
-    <script src="{{ asset('js/bundle.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,8 +29,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<!-- ToDo Bodyタグ以下は後でつくる。まずはTOPページから -->
 <body>
+
+@if ( session ('flash_massage'))
+    <div class="alert alert-primary text-center" role="alert">
+        {{ session ('flash_message')}}
+    </div>
+    @endif
 
 <!-- ヘッダーのテンプレート -->
 @section('header')
@@ -66,7 +67,8 @@
                         </div>
                     @else
                         <li class="c-menu__item"><a class="c-menu__link" href="/welcome">{{ __('TOP') }}</a></li>
-                        <li class="c-menu__item"><a class="c-menu__link" href="/welcome#p-service">{{ __('サービス') }}</a></li>
+                        <li class="c-menu__item"><a class="c-menu__link" href="/welcome#p-service">{{ __('サービス') }}</a>
+                        </li>
                         <li class="c-menu__item"><a class="c-menu__link" href="/welcome#p-price">{{ __('料金') }}</a></li>
                         <li class="c-menu__item"><a class="c-menu__link"
                                                     href="{{ route('register') }}">{{ __('まずは無料登録') }}</a></li>
@@ -81,17 +83,20 @@
     </header>
 @show
 
+
 <main id="l-main">
-    @yield('content')
+        @yield('content')
+        @yield('sidebar')
 </main>
+
 
 <!-- フッターのテンプレート -->
 @section('footer')
     <footer id="l-footer">
         <div class="p-footer">
-            <p><a class="c-footer" href="">プライバシーポリシー</a></p>
-            <p><a class="c-footer" href="">サイトご利用規約</a></p>
-            <p><a class="c-footer" href="">お問い合わせ</a></p>
+            <p class="p-footer__link"><a class="c-footer" href="">プライバシーポリシー</a></p>
+            <p class="p-footer__link"><a class="c-footer" href="">サイトご利用規約</a></p>
+            <p class="p-footer__link"><a class="c-footer" href="">お問い合わせ</a></p>
         </div>
         <div>
             <p>Copyright ©kamitter. All Rights Reserved</p>
@@ -99,5 +104,8 @@
     </footer>
 @show
 
+<!-- Scripts -->
+<script src="{{ asset('js/bundle.js') }}" defer></script>
 </body>
+
 </html>

@@ -6,6 +6,8 @@ $line-height-default: 1.6;
 
 //width
 $site-width: 1080px;
+$main: 800px;
+$sidebar: 280px;
 
 //fontsize
 $font-size-s: 12px;
@@ -25,7 +27,10 @@ $space_xxl:30px;
 $space_3l:40px;
 
 // Colors
-$blue: #3490dc;
+$blue: rgb(104,198,223);
+$blue2:rgb(072,171,212);
+$blue3:rgb(051,123,183);
+
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
@@ -35,14 +40,25 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
-$white: #fff;
+$white: #FFFFFF;
+$gray: #EEF1F2;
+$black: #111;
 
-$color_corp: $blue;
-$body-bg: #f8fafc;
+$color_corp: $white;
+$color_bg: $black;
+$color_main:$gray;
+$color_sidebar:$white;
+$color_title:$gray;
+$color_header:$gray;
+$color_footer:$black;
+$color_button:$black;
+$color_form: $white;
+
 
 //font-color
 $font-color-default: #777;
-$font-color-header: #fff;
+$font-color-header: #777;
+$font-color-footer: #777 ;
 $font-color-hover: #000;
 
 //メディアクエリのブレークポイント設定

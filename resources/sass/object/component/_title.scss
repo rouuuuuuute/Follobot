@@ -2,4 +2,14 @@
     font-size: $font-size_l;
     font-family: $font-family_sans-serif;
     font-weight: bold;
+
+    &__sidebar{
+        color:$font-color-default;
+        width:$sidebar;
+    }
+    &__form{
+        text-align: center;
+        vertical-align:center;
+        font-size: $font-size_xxl;
+    }
 }

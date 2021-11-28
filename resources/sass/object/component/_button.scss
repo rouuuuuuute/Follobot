@@ -1,0 +1,32 @@
+.c-button{
+    //todo
+    margin:auto;
+    height:50px;
+    font-size: $font-size_l;
+    border-radius:5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color:$color_button;
+    color: $white;
+    &__wrap{
+        display: flex;
+    }
+    &__top{
+        width: 300px;
+    }
+    &__sidebar{
+        //todo
+        display: inline-block;
+        width:125px;
+        float:left;
+        margin:10px 10px;
+        &:last-child{
+            margin-left:0;
+        }
+    }
+    &__form{
+        width:200px;
+        margin:auto;
+    }
+}
