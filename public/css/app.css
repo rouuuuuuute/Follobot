@@ -405,6 +405,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.1em;
   background-color: #EEF1F2;
+  overflow-x: hidden;
 }
 @media screen and (max-width:414px) {
   html, body {
@@ -630,11 +631,10 @@ img {
 }
 @media screen and (max-width:414px) {
   .c-menu {
-    font-size: 12px;
     display: block;
+    font-size: 12px;
     position: absolute;
     top: 0;
-    right: -100%;
     background: rgba(255, 255, 255, 0.85);
     width: 100%;
     height: 100vh;
@@ -693,15 +693,6 @@ img {
   }
   .c-menu__sp span:nth-of-type(3) {
     bottom: 0;
-  }
-  .c-menu__sp .active span:nth-of-type(1) {
-    transform: translateY(12px) rotate(-45deg);
-  }
-  .c-menu__sp .active span:nth-of-type(2) {
-    opacity: 0;
-  }
-  .c-menu__sp .active span:nth-of-type(3) {
-    transform: translateY(-15px) rotate(45deg);
   }
 }
 

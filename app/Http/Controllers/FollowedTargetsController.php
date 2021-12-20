@@ -88,7 +88,6 @@ class FollowedTargetsController extends Controller
 
                 return redirect()->action('FollowingTargetsController@create', ['account_id'=>$account_id,'target_id'=>$target_id]);
             } else {
-                //ToDo アカウントが間違っている内容のメールを送る
                 //アカウント名が間違っているときは、ターゲットアカウントが誤っている旨を表示
                 Log::debug(print_r($data[0]['code'], true));
 

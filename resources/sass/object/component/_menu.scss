@@ -5,11 +5,10 @@
     font-family: $font-family_sans-serif;
     color: $font-color_header;
     @include mq() {
+        display:block;
         font-size: $font-size_s;
-        display: block;
         position: absolute;
         top: 0;
-        right: -100%;
         background: rgba(255, 255, 255, .85);
         width: 100%;
         height: 100vh;
@@ -22,7 +21,6 @@
             text-align: center;
             font-size: $font-size_xl;
             line-height:50px;
-
         }
     }
 
@@ -69,18 +67,6 @@
 
             span:nth-of-type(3) {
                 bottom: 0;
-            }
-
-            .active span:nth-of-type(1) {
-                transform: translateY(12px) rotate(-45deg);
-            }
-
-            .active span:nth-of-type(2) {
-                opacity: 0;
-            }
-
-            .active span:nth-of-type(3) {
-                transform: translateY(-15px) rotate(45deg);
             }
         }
     }

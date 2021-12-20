@@ -55,7 +55,6 @@ return [
     |
     */
 
-    //ToDo あとで変えておくこと
     'from' => [
         'address' => env('kamitter.webukatu@gmail.com', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),

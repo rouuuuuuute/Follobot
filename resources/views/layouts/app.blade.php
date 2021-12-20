@@ -41,7 +41,6 @@
         </div>
         <nav class="js-toggle-sp-menu-target">
             <ul class="c-menu">
-                <!-- ToDo href変える-->
                 @if (Route::has('register'))
                     @auth
                         <li class="c-menu__item js-toggle-sp-menu-target">

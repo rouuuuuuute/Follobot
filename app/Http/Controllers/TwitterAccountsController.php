@@ -41,7 +41,6 @@ class TwitterAccountsController extends Controller
             $twitteraccount->oauth_token_secret = $query['oauth_token_secret'];
             $twitteraccount->save();
 
-            //ToDo 重複登録したときにエラー表示が出るようにすること。
             return redirect('/twitter/accounts')->with('flash_message','登録しました');
 
         } elseif ( isset( $_GET["denied"] ) ) {

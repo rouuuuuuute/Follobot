@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-{{--ToDo 要件にはないが、次回までに実装させたいもの jsでのバリデーション、多言語対応、入力値の保持--}}
 
 @section('content')
 

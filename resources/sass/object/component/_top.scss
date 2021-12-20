@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    //todo
     padding-bottom: 20px;
 
 
@@ -18,7 +17,6 @@
     &__theme {
         font-size: $font-size_xxl;
         font-weight: bold;
-        //todo
         padding-top:30px;
         padding-bottom: 30px;
         @include mq(){
@@ -29,7 +27,6 @@
     &__heading {
         font-size: $font-size_xl;
         font-weight: bold;
-        //todo
         padding-top:10px;
         padding-bottom: 10px;
         @include mq(){

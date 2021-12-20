@@ -23,7 +23,6 @@ class FollowKeywordsController extends Controller
 
     public function create(Request $request)
     {
-        //ToDo 複数登録しようとしたときに、現状だとelseでとばされるだけなので、エラーメッセージがでるようにする
         //２個以上キーワード登録ができないように、データの数を取得して、１個データが入っていると登録できないようにしている
         $account_id = $request->account_id;
         $data = DB::table('follow_keywords')->where('account_id', '=', $account_id)->count();

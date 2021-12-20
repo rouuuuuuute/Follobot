@@ -69,7 +69,6 @@
                         </div>
                     </form>
 
-<!--                    ToDO バリデーションどうするか-->
                     <div v-if="errors.length">
                         <h1>以下のエラーを修正してください。</h1>
                         <ul>

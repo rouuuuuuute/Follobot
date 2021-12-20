@@ -28,7 +28,6 @@ class ProfileController extends Controller
         return view('home.profile');
     }
 
-    //ToDo バリデーションの箇所、このままだと同じ内容を登録することはできるが、他者のemailを登録しようとするとDB側でエラーがでて別ページにはじかれる。方法を考えないといけない。
     public function edit(Request $request)
     {
         $request -> validate([
@@ -41,7 +40,6 @@ class ProfileController extends Controller
         return redirect('/profile')->with('flash_message','更新しました');
     }
 
-    //ToDo 退会処理を論理削除できるようにする。
     public function withdraw()
     {
         $id = Auth::id();
