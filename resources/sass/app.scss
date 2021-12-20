@@ -16,8 +16,12 @@
 @import "object/project/_sidebar.scss";
 @import "object/project/_main.scss";
 @import "object/project/_form.scss";
+@import "object/project/_prof.scss";
+@import "object/project/_price.scss";
+@import "object/project/_service.scss";
 
 //component
+@import "object/component/_alert.scss";
 @import "object/component/_menu.scss";
 @import "object/component/_title.scss";
 @import "object/component/_img.scss";
@@ -25,3 +29,7 @@
 @import "object/component/_sidebar.scss";
 @import "object/component/_button.scss";
 @import "object/component/_form.scss";
+@import "object/component/_table.scss";
+@import "object/component/_select.scss";
+@import "object/component/_invalid.scss";
+@import "object/component/_card.scss";

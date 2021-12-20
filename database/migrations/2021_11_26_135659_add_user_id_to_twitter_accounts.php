@@ -16,7 +16,7 @@ class AddUserIdToTwitterAccounts extends Migration
     {
         Schema::table('twitter_accounts', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('twitter_id')->unique();
             $table->string('screen_name');
             $table->string('oauth_token');

@@ -10,7 +10,10 @@ html , body{
     font-family:$font-family-sans-serif;
     -webkit-text-size-adjust: 100%;
     letter-spacing: 0.1em;
-    background-color:$color_bg;
+    background-color:$color_main;
+    @include mq(){
+        width: 100%;
+    }
 }
 
 p , a {

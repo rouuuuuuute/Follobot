@@ -9,4 +9,8 @@
     box-sizing: border-box;
     background-color: $color_footer;
     color: $font-color-footer;
+    @include mq(){
+        width: 100%;
+        font-size: $font-size_s;
+    }
 }

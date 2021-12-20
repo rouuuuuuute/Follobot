@@ -15,7 +15,7 @@ class AddAccountIdToTweets extends Migration
     {
         Schema::table('tweets', function (Blueprint $table) {
             $table->unsignedBigInteger('account_id');
-            $table->foreign('account_id')->references('id')->on('twitter_accounts');
+            $table->foreign('account_id')->references('id')->on('twitter_accounts')->onDelete('cascade');
 
         });
     }

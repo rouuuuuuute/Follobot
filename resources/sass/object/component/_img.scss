@@ -4,6 +4,9 @@
         width: 370px;
         height: 390px;
         z-index:1;
+        @include mq(){
+            display: none;
+        }
     }
     &__human {
         margin-left:-50px;
@@ -13,6 +16,9 @@
         width: 110px;
         height: 130px;
         z-index:1;
+        @include mq(){
+            display: none;
+        }
         &--female {
             margin-left: 30px;
         }
@@ -23,6 +29,25 @@
         padding-top:124px;
         padding-bottom:124px;
         transform: scale(-1, 1);
+        z-index:3;
+        @include mq(){
+            display: none;
+        }
+    }
+
+    &__follow{
+        width:120px;
+        margin-left:-130px;
+        padding-bottom:250px;
+        padding-left:30px;
         z-index:2;
+        @include mq(){
+            display: none;
+        }
+    }
+
+    &__logo{
+        width:100px;
+        margin:auto;
     }
 }

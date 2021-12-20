@@ -3,4 +3,7 @@
     margin:auto;
     background-color:$color_form;
     padding:20px;
+    @include mq(){
+        width:100%;
+    }
 }

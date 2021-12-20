@@ -15,8 +15,9 @@ class AddAccountIdToFavorites extends Migration
     {
         Schema::table('favorites', function (Blueprint $table) {
             $table->unsignedBigInteger('account_id');
-            $table->foreign('account_id')->references('id')->on('twitter_accounts');
-
+            $table->foreign('account_id')->references('id')->on('twitter_accounts')->onDelete('cascade');
+            $table->string('logic')->nullable();
+            $table->string('favorite_keyword2')->nullable();
         });
     }
 
@@ -30,6 +31,8 @@ class AddAccountIdToFavorites extends Migration
         Schema::table('favorites', function (Blueprint $table) {
             $table->dropForeign(['account_id']);
             $table->dropColumn('account_id');
+            $table->dropColumn('logic');
+            $table->dropColumn('favorite_keyword2');
         });
     }
 }

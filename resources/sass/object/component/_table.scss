@@ -1,0 +1,23 @@
+.c-table{
+    width: 100%;
+    table-layout: fixed;
+    line-height:40px;
+    border-collapse: collapse;
+    margin:20px auto 20px;
+
+    &__thead{
+        width: 100%;
+        text-align: center;
+    }
+    &__th{
+        background-color:$gray;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    &__td{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

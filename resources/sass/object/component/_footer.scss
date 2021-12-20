@@ -1,3 +1,6 @@
 .c-footer{
     display: inline-block;
+    @include mq(){
+        font-size: $font-size_s;
+    }
 }

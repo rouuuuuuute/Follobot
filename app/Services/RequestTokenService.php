@@ -101,7 +101,6 @@ class RequestTokenService{
 
 // 取得したデータ
         $response = substr($res1, $res2["header_size"]);    // 取得したデータ(JSONなど)
-//        $header = substr($res1, 0, $res2["header_size"]);    // レスポンスヘッダー (検証に利用したい場合にどうぞ)
 
 // リクエストトークンを取得できなかった場合
         if (!$response) {

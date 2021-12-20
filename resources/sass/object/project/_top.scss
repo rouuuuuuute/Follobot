@@ -8,11 +8,22 @@
     align-items: center;
     padding-left: $space_xxl;
     padding-right: $space_xxl;
+    @include mq(){
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        padding-left: $space_m;
+        padding-right: $space_m;
+    }
+
     &__msg{
     }
     &__img {
         display: flex;
         align-items: flex-start;
         width:500px;
+        @include mq(){
+            width:100%;
+        }
     }
 }

@@ -1,0 +1,30 @@
+.c-card{
+    display:flex;
+    justify-content: space-between;
+    @include mq(){
+        display:flex;
+        flex-direction:column;
+    }
+
+    &__title{
+        font-size: $font-size_l;
+        font-weight: bold;
+        //todo
+        padding-top:20px;
+        padding-bottom: 10px;
+    }
+
+    &__service{
+        width:30%;
+        margin:auto;
+        border-radius:10px;
+        background-color:$color_form;
+        min-height: 220px;
+        @include mq(){
+            width:80%;
+            min-height:150px;
+            margin-bottom: 30px;
+        }
+
+    }
+}

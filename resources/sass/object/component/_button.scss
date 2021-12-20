@@ -9,6 +9,11 @@
     cursor: pointer;
     background-color:$color_button;
     color: $white;
+    @include mq(){
+        font-size: $font-size_m;
+    }
+
+
     &__wrap{
         display: flex;
     }
@@ -28,5 +33,8 @@
     &__form{
         width:200px;
         margin:auto;
+        @include mq(){
+            width:150px;
+        }
     }
 }

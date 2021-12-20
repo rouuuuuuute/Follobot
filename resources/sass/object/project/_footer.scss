@@ -2,6 +2,9 @@
     display: flex;
     &__link{
         padding-left: $space_xxl;
+        @include mq(){
+            font-size: $font-size_s;
+        }
     }
 
 }

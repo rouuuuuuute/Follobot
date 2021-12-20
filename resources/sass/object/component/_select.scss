@@ -1,0 +1,61 @@
+.c-select {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &__expand {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        background: $gray;
+        color: $black;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:hover {
+            color: $black;
+            background: $gray;
+        }
+
+        &:focus {
+            color: $black;
+            background: $gray;
+        }
+
+        &--arrow {
+            position: absolute;
+            top: 45px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            border-style: solid;
+            border-width: 8px 5px 0 5px;
+            border-color: $black transparent transparent transparent;
+
+            &:hover {
+                border-top-color: $black;
+            }
+
+
+            &:focus {
+                border-top-color: $black;
+            }
+
+            &:disabled {
+                border-top-color: $black;
+            }
+        }
+    }
+}

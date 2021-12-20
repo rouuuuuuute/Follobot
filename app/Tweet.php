@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tweet extends Model
 {
-    protected $fillable = ['tweet,reserved_at'];
+    protected $fillable = ['tweet','reserved_at'];
 
-    public function tweet()
+    public function twitterAccount()
     {
         return $this->belongsTo('App\TwitterAccount');
     }

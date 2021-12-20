@@ -15,7 +15,7 @@ class AddTargetIdToFollowedTargets extends Migration
     {
         Schema::table('followed_targets', function (Blueprint $table) {
             $table->unsignedBigInteger('target_id');
-            $table->foreign('target_id')->references('id')->on('targets');
+            $table->foreign('target_id')->references('id')->on('targets')->onDelete('cascade');
         });
     }
 

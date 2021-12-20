@@ -14,8 +14,8 @@ class AddFollowedIdToFollowingTargets extends Migration
     public function up()
     {
         Schema::table('following_targets', function (Blueprint $table) {
-            $table->unsignedBigInteger('followed_id');
-            $table->foreign('followed_id')->references('id')->on('followed_targets');
+            $table->unsignedBigInteger('target_id');
+            $table->foreign('target_id')->references('id')->on('targets')->onDelete('cascade');
         });
     }
 
@@ -27,8 +27,8 @@ class AddFollowedIdToFollowingTargets extends Migration
     public function down()
     {
         Schema::table('following_targets', function (Blueprint $table) {
-            $table->dropForeign(['followed_id']);
-            $table->dropColumn('followed_id');
+            $table->dropForeign(['target_id']);
+            $table->dropColumn('target_id');
         });
     }
 }

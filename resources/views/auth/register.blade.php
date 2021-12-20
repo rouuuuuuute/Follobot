@@ -14,7 +14,7 @@
                                name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                         @error('name')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid__feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror
@@ -30,7 +30,7 @@
                                name="email" value="{{ old('email') }}" required autocomplete="email">
 
                         @error('email')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid__feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror
@@ -48,7 +48,7 @@
                                autocomplete="new-password">
 
                         @error('password')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="c-invalid__feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror

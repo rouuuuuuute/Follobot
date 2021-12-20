@@ -1,5 +1,5 @@
 {
-    "Name":     "氏名",
+    "Name":     "ニックネーム",
     "E-Mail Address": "Eメールアドレス",
     "Password": "パスワード",
     "Confirm Password": "再確認パスワード",
@@ -17,6 +17,14 @@
     "Favorites Keywords":"「自動いいね」キーワード",
     "Follow Keywords": "「自動フォロー」キーワード",
     "Change Your Password?":"パスワードを変更する場合はこちら",
-    "Register Accounts": "アカウント登録"
-
+    "Register Accounts": "アカウント登録",
+    "Send Password Reset Link": "リセット",
+    "Reset Password": "パスワードリセット",
+    "Reset Password Notification": "パスワードリセット通知",
+    "You are receiving this email because we received a password reset request for your account.": "このメールは、お客様のアカウントのパスワード再設定リクエストを受信したために送信されています。",
+    "This password reset link will expire in :count minutes.": "このパスワードリセットリンクは、:count 分で失効します。",
+    "If you did not request a password reset, no further action is required.": "パスワードのリセットを要求していない場合は、これ以上の操作は必要ありません。",
+    "Please click the button below to verify your email address.": "以下のボタンをクリックして、メールアドレスの確認をしてください。",
+    "Verify Email Address": "メールアドレスの確認",
+    "If you did not create an account, no further action is required.": "アカウントを作成されていない場合は、これ以上の操作は必要ありません。"
 }

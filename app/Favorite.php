@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Favorite extends Model
 {
-    protected $fillable = ['favorite_keyword'];
+    protected $fillable = ['favorite_keyword','favorite_keyword2','logic'];
 
-    public function twitteraccount()
+    public function twitterAccount()
     {
         return $this->belongsTo('App\TwitterAccount');
     }

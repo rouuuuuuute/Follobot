@@ -1,0 +1,26 @@
+.c-arelt {
+    //todo
+    height: 50px;
+    width: 100%;
+    margin:auto;
+    background: $black;
+    color: $white;
+    font-size: $font-size_l;
+    z-index:10;
+    text-align: center;
+    position: fixed;
+    transition: all 200ms ease-out;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-out 3s ease 3s forwards;
+    -webkit-animation: fade-out 3s ease 3s forwards;
+
+    @-webkit-keyframes fade-out {
+        100% {opacity: 0;}
+    }
+
+    @keyframes fade-out {
+        100% {opacity: 0;}
+    }
+}

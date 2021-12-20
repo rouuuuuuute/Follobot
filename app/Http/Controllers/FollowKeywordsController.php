@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\FollowKeyword;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
 
 
 class FollowKeywordsController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -17,9 +17,7 @@ class FollowKeywordsController extends Controller
 
     public function index()
     {
-        $user_id = Auth::id();
-        $screen_names = DB::table('twitter_accounts')->where('user_id', '=', $user_id)->pluck('screen_name');
-        return view('twitter.followkeywords', ['screen_names' => $screen_names]);
+        return view('twitter.followkeywords');
     }
 
 
@@ -27,24 +25,45 @@ class FollowKeywordsController extends Controller
     {
         //ToDo 複数登録しようとしたときに、現状だとelseでとばされるだけなので、エラーメッセージがでるようにする
         //２個以上キーワード登録ができないように、データの数を取得して、１個データが入っていると登録できないようにしている
-        $screen_name = $request->screen_name;
-        $account_id = DB::table('twitter_accounts')->where('screen_name', '=', $screen_name)->value('id');
+        $account_id = $request->account_id;
         $data = DB::table('follow_keywords')->where('account_id', '=', $account_id)->count();
         if ($data < 1) {
             $request->validate([
-                'keyword' => 'required | string |max:255'
+                'keyword' => 'required | string |max:255',
+                'keyword2' => 'string |max:255'
             ]);
             $followkeyword = new FollowKeyword;
-            $followkeyword->account_id = DB::table('twitter_accounts')->where('screen_name', '=', $screen_name)->value('id');
+            $followkeyword->account_id = $request->account_id;
             $followkeyword->keyword = $request->keyword;
+            $followkeyword->keyword2 = $request->keyword2;
+            $followkeyword->logic = $request->logic;
             $followkeyword->save();
-            return redirect('/twitter/keywords/follow')->with('flash_message', __('Registerd'));
+            return redirect('/twitter/keywords/follow')->with('flash_message', '登録しました');
         } else {
-            $user_id = Auth::id();
-            $screen_names = DB::table('twitter_accounts')->where('user_id', '=', $user_id)->pluck('screen_name');
-            return view('twitter.followkeywords', ['screen_names' => $screen_names]);
-
+            return redirect('/twitter/keywords/follow')->with('flash_message', '登録できませんでした。登録済みのものを削除してください');
         }
+    }
+
+    public function edit(Request $request)
+    {
+        $request->validate([
+            'keyword' => 'required | string |max:255',
+            'keyword2' => 'string |max:255'
+        ]);
+        $account_id = $request->account_id;
+        $id = DB::table('follow_keywords')->where('account_id','=', $account_id)->value('id');
+        $followkeyword = FollowKeyword::find($id);
+        $followkeyword ->fill($request->all())->save();
+        return redirect('/twitter/keywords/follow')->with('flash_message', '更新しました');
+
+    }
+
+    public function destroy(Request $request)
+    {
+        $account_id = $request->account_id;
+        FollowKeyword::where('account_id',$account_id)->delete();
+        return redirect('/twitter/keywords/follow')->with('flash_message', '削除しました');
+
     }
 
 }

@@ -4,11 +4,16 @@
     text-align: center;
     //todo
     padding-bottom: 20px;
+
+
     &__title {
         font-size: $font-size_xxl;
         font-weight: bold;
         line-height: $space_xxl;
         color: $color_title;
+        @include mq(){
+            font-size: $font-size_l;
+        }
     }
     &__theme {
         font-size: $font-size_xxl;
@@ -16,5 +21,19 @@
         //todo
         padding-top:30px;
         padding-bottom: 30px;
+        @include mq(){
+            font-size: $font-size_l;
+        }
+    }
+
+    &__heading {
+        font-size: $font-size_xl;
+        font-weight: bold;
+        //todo
+        padding-top:10px;
+        padding-bottom: 10px;
+        @include mq(){
+            font-size: $font-size_l;
+        }
     }
 }

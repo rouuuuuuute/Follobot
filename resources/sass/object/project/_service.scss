@@ -1,0 +1,8 @@
+#p-service{
+    width: 100%;
+    margin:auto;
+    margin-bottom:50px;
+    @include mq(){
+        width:100%;
+    }
+}

@@ -12,4 +12,9 @@ class TwitterAccount extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function targets()
+    {
+        return $this->hasMany('App\Target');
+    }
 }

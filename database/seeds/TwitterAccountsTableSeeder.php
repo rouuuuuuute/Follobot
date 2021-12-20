@@ -14,10 +14,10 @@ class TwitterAccountsTableSeeder extends Seeder
     {
             DB::table('twitter_accounts')->insert([
                 'user_id' => '1',
-                'twitter_id' => '1234567890',
-                'screen_name' => '12345',
-                'oauth_token' => '123456',
-                'oauth_token_secret' => '1234567',
+                'twitter_id' => Str::random(5),
+                'screen_name' => Str::random(7),
+                'oauth_token' => Str::random(10),
+                'oauth_token_secret' => Str::random(10),
             ]);
     }
 }

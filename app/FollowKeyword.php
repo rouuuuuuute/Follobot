@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class FollowKeyword extends Model
 {
-    protected $fillable = ['keyword'];
+    protected $fillable = ['keyword','keyword2','logic'];
 
-    public function twitteraccount()
+    public function twitterAccount()
     {
         return $this->belongsTo('App\TwitterAccount');
     }

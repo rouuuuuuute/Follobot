@@ -1,0 +1,12 @@
+.p-prof{
+    //todo
+    width: 500px;
+    margin:auto;
+    margin-bottom:50px;
+    border-radius:10px;
+    background-color:$color_form;
+    @include mq(){
+        margin-top:50px;
+        width:80%;
+    }
+}

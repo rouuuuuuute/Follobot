@@ -12,6 +12,12 @@
     align-items: center;
     transition: .3s;
     z-index: 2;
+    @include mq(){
+        width: 100%;
+        position: relative;
+        padding-left: $space_s;
+        padding-right: $space_s;
+    }
 }
 
 

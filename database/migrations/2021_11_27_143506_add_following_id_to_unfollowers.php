@@ -14,8 +14,8 @@ class AddFollowingIdToUnfollowers extends Migration
     public function up()
     {
         Schema::table('unfollowers', function (Blueprint $table) {
-            $table->unsignedBigInteger('following_id');
-            $table->foreign('following_id')->references('id')->on('following_targets');
+            $table->unsignedBigInteger('target_id');
+            $table->foreign('target_id')->references('id')->on('targets')->onDelete('cascade');
         });
     }
 
@@ -27,8 +27,8 @@ class AddFollowingIdToUnfollowers extends Migration
     public function down()
     {
         Schema::table('unfollowers', function (Blueprint $table) {
-            $table->dropForeign(['following_id']);
-            $table->dropColumn('following_id');
+            $table->dropForeign(['target_id']);
+            $table->dropColumn('target_id');
         });
     }
 }

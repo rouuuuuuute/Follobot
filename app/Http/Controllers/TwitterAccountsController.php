@@ -38,27 +38,22 @@ class TwitterAccountsController extends Controller
             $twitteraccount->twitter_id = $query['user_id'];
             $twitteraccount->screen_name = $query['screen_name'];
             $twitteraccount->oauth_token = $query['oauth_token'];
-            $twitteraccount->oauth_token_secret = password_hash($query['oauth_token_secret'], PASSWORD_DEFAULT);
+            $twitteraccount->oauth_token_secret = $query['oauth_token_secret'];
             $twitteraccount->save();
 
             //ToDo 重複登録したときにエラー表示が出るようにすること。
-            return redirect('/twitter/accounts')->with('flash_message',__('Registerd'));
+            return redirect('/twitter/accounts')->with('flash_message','登録しました');
 
         } elseif ( isset( $_GET["denied"] ) ) {
             echo "連携を拒否しました。";
-            $user_id = Auth::id();
-            $screen_names = DB::table('twitter_accounts')->where('user_id', '=',$user_id)->pluck('screen_name');
-            return view ('twitter.accounts',['screen_names' => $screen_names ]);
+            return view ('twitter.accounts');
         } else{
-            $user_id = Auth::id();
-            $screen_names = DB::table('twitter_accounts')->where('user_id', '=',$user_id)->pluck('screen_name');
-            return view ('twitter.accounts',['screen_names' => $screen_names ]);
+            return view ('twitter.accounts');
         }
     }
 
     public function request()
     {
-        //１０個以上アカウント登録ができないように、データの数を取得して、１０個以上なら登録できないようにする
         $user_id = Auth::id();
         $data = DB::table('twitter_accounts')->where('user_id', '=',$user_id)->count();
         if($data<10) {
@@ -73,11 +68,16 @@ class TwitterAccountsController extends Controller
             $request_token = new RequestTokenService($api_key, $api_secret, $callback_url, $access_token_secret, $request_url, $request_method);
             $query = $request_token->request();
 
-            //ToDo アカウント登録１０個以上のとき、エラーメッセージだすようにする
             return redirect()->away("https://api.twitter.com/oauth/authorize?oauth_token=" . $query["oauth_token"]);
         }else{
-            $screen_names = DB::table('twitter_accounts')->where('user_id', '=',$user_id)->pluck('screen_name');
-            return view ('twitter.accounts',['screen_names' => $screen_names ]);
+            return view ('twitter.accounts');
         }
+    }
+    public function destroy(Request $request)
+    {
+        $account_id = $request->account_id;
+        TwitterAccount::where('id',$account_id)->delete();
+        return view('twitter.accounts')->with('flash_message', '削除しました');
+
     }
 }
