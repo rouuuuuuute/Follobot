@@ -104,10 +104,6 @@
 @section('footer')
     <footer id="l-footer">
         <div class="p-footer">
-            <p class="p-footer__link"><a class="c-footer" href="">プライバシーポリシー</a></p>
-            <p class="p-footer__link"><a class="c-footer" href="">サイトご利用規約</a></p>
-        </div>
-        <div>
             <p>Copyright ©kamitter. All Rights Reserved</p>
         </div>
     </footer>
