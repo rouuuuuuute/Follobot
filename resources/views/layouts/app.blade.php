@@ -14,7 +14,7 @@
 
     <!-- 子テンプレートでsection('title')があるかどうかで表示をわけている -->
     @hasSection('title')
-        <title>@yield('title') | 神ったー</title>
+        <title>@yield('title') | フォロボット</title>
     @else
         <title>{{ config('app.name') }}</title>
 @endif
@@ -33,7 +33,7 @@
 <!-- ヘッダーのテンプレート -->
 @section('header')
     <header id="l-header">
-        <h1 class="c-title"><a class="c-menu__link" href="/welcome">Twitterデータを利用した集客サービス|神ったー</a></h1>
+        <h1 class="c-title"><a class="c-menu__link" href="/welcome">Twitterデータを利用した集客サービス|フォロボット</a></h1>
         <div class="c-menu__sp js-toggle-sp-menu">
             <span></span>
             <span></span>
@@ -103,7 +103,7 @@
 @section('footer')
     <footer id="l-footer">
         <div class="p-footer">
-            <p>Copyright ©kamitter. All Rights Reserved</p>
+            <p>Copyright ©follobot. All Rights Reserved</p>
         </div>
     </footer>
 @show

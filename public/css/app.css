@@ -446,7 +446,7 @@ img {
 @media screen and (max-width:414px) {
   #l-footer {
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -469,8 +469,8 @@ img {
   #l-header {
     width: 100%;
     position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -533,7 +533,7 @@ img {
 }
 @media screen and (max-width:414px) {
   .p-footer__link {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -623,6 +623,7 @@ img {
 }
 
 .c-menu {
+  width: 100%;
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -632,7 +633,7 @@ img {
 @media screen and (max-width:414px) {
   .c-menu {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     position: absolute;
     top: 0;
     background: rgba(255, 255, 255, 0.85);
@@ -703,7 +704,7 @@ img {
 }
 @media screen and (max-width:414px) {
   .c-title {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 .c-title__sidebar {

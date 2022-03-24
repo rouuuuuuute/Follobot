@@ -51,7 +51,7 @@
         <section class="p-prof">
             <section class="">
                 <div class="c-top">
-                    <h2 class="c-top__heading">神ったーとは</h2>
+                    <h2 class="c-top__heading">フォロボットとは</h2>
                     <p class="c-top__text">Twitter社から提供されるデータを使って<br>お客様のアカウントのフォロワーを増やし<br>ターゲットからの認知度をあげるツールです</p>
                 </div>
             </section>
@@ -65,7 +65,7 @@
                     <p class="c-top__text">お客様のアカウントの認知度が低い</p>
                     <p class="c-top__text">誰に訴求できたかわからない</p>
                     <p class="c-top__text">フォロワーを増やす時間がない</p>
-                    <p class="c-top__text">神ったーなら解決できます！</p>
+                    <p class="c-top__text">フォロボットなら解決できます！</p>
                 </div>
             </section>
         </section>
